@@ -16,7 +16,7 @@ GTF will now generate queries that will extract rows of data from the table base
 
 Sincce 1.8 you can distribute the flowfiles within a connection. So open the connection configuration and select load balance policy to round robin. This will distribute the generated queries to all the nodes in the cluster.
 
-<img src="Screen%20Shot%202019-06-19%20at%2012.28.38%20AM.png" alt="distribute" width="1000" height="5000">
+<img src="Screen%20Shot%202019-06-19%20at%2012.28.38%20AM.png" alt="distribute" width="1000" height="500">
 
 
 You can also play with the concurrent task settings in the executesqlrecord and puts3object processor. This will allow to create a pipeline where multiple threads could be executing the query and retrieve data from your db , while in seperate thread s3 processor is uploading the extracted data to s3. See below
